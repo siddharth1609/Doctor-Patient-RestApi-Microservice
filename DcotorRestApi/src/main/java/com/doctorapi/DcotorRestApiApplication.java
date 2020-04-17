@@ -5,13 +5,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
+import com.doctorapi.config.RibbonConfiguration;
+
+@SpringBootApplication(scanBasePackages = "com.doctorapi.controller") //important, otherwise crash
 @EnableDiscoveryClient
 @EnableFeignClients
+@RibbonClient(name = "ribbon-app", configuration = RibbonConfiguration.class)
 public class DcotorRestApiApplication {
 
 	public static void main(String[] args) {
