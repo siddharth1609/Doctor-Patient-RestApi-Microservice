@@ -1,11 +1,20 @@
-package com.patientapi.comtroller;
+package com.patientapi.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.patientapi.model.Patient;
+import com.patientapi.service.PatientService;
+
 @RestController
 public class PatientController {
+	
+	   @Autowired
+	   private PatientService  patientService;
 
 	
 	   @GetMapping("/greeting")
@@ -27,5 +36,22 @@ public class PatientController {
 	    public String hi() {
 	        return "Welcome, I am " + instance;
 	    }
+	    
+	    
+	    
+	  @GetMapping("/getPatientList")  
+	   public List<Patient> getPatient(){
+		   
+		   List<Patient> pList = patientService.getPatientList();
+		   
+		   
+		   return pList;
+	   } 
+	    
+	    
+	    
+	    
+	    
+	    
 	
 }

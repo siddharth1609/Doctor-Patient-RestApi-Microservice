@@ -13,10 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.doctorapi.patientclient.RestClient;
+import com.doctorapi.services.DoctorServices;
 
 
 @RestController
 public class DoctorController {
+	
+	@Autowired(required=true)
+	private DoctorServices doctorServices;
+	
     
 	@Autowired
     DiscoveryClient discoveryClient;
@@ -78,6 +83,11 @@ public class DoctorController {
         }
         return "index";
 	}
+	
+	  @GetMapping("/to-read")
+	  public String toRead() {
+	  return doctorServices.readingList();
+	  }
 	
 	
 }
