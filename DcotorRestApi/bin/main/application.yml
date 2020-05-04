@@ -18,8 +18,10 @@ spring:
 logging:
   level:
     com.example.howtodoinjava: DEBUG
+    file : elk-example.log      
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+        
