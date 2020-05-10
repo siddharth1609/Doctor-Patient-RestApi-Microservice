@@ -22,7 +22,7 @@ public class DoctorServiceImpl  implements DoctorServices{
 
 	@HystrixCommand(fallbackMethod = "reliable")
 	  public String readingList() {
-	  URI uri = URI.create("http://localhost:9200/getPatientList1");
+	  URI uri = URI.create("http://localhost:9300/getPatientList1");
 
 	  return this.restTemplate.getForObject(uri, String.class);
 	  }

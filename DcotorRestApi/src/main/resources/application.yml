@@ -15,13 +15,15 @@ spring:
     active: production
   application:
     name: doctor-service
-logging:
-  level:
-    com.example.howtodoinjava: DEBUG
-    file : elk-example.log      
+      
 management:
   endpoints:
     web:
       exposure:
         include: '*'
         
+logging:
+  file: elk-example.log
+  level:
+    com.doctorapi: DEBUG
+    

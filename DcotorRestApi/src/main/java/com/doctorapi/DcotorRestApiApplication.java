@@ -32,7 +32,7 @@ import com.doctorapi.config.RibbonConfiguration;
 
 
 
-@SpringBootApplication(scanBasePackages = {"com.doctorapi.controller","com.doctorapi.services"}) //important, otherwise crash
+@SpringBootApplication(scanBasePackages = {"com.doctorapi.controller","com.doctorapi.services","com.doctorapi"}) //important, otherwise crash
 @EnableDiscoveryClient
 @EnableFeignClients
 @RibbonClient(name = "ribbon-app", configuration = RibbonConfiguration.class)
@@ -73,10 +73,10 @@ class ELKController {
     @Autowired
     RestTemplate restTemplete;
  
-    @Bean
+    /*@Bean
     RestTemplate restTemplate() {
         return new RestTemplate();
-    }
+    }*/
  
     @RequestMapping(value = "/elkdemo")
     public String helloWorld() {

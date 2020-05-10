@@ -1,0 +1,88 @@
+2020-05-11 00:00:52.981  INFO 7668 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2020-05-11 00:00:53.866  INFO 7668 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=doctor-service, profiles=[default], label=null, version=c013b612aa63a551ca290099fa0584b197e0cd67, state=null
+2020-05-11 00:00:53.867  INFO 7668 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2020-05-11 00:00:53.893  INFO 7668 --- [restartedMain] com.doctorapi.DcotorRestApiApplication   : The following profiles are active: production
+2020-05-11 00:00:55.540  INFO 7668 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1224019f-701d-38bc-9a5c-9bc9cf923ac8
+2020-05-11 00:00:55.981  INFO 7668 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9100 (http)
+2020-05-11 00:00:55.985  INFO 7668 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-11 00:00:55.985  INFO 7668 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-11 00:00:56.155  INFO 7668 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-11 00:00:56.156  INFO 7668 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2252 ms
+2020-05-11 00:00:56.324  WARN 7668 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-11 00:00:56.325  INFO 7668 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-11 00:00:56.326  INFO 7668 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4ee07d38
+2020-05-11 00:00:58.044  INFO 7668 --- [restartedMain] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2020-05-11 00:00:58.248  INFO 7668 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-11 00:00:59.304  WARN 7668 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ribbonConfiguration': Unsatisfied dependency expressed through field 'ribbonClientConfig'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.netflix.client.config.IClientConfig' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-05-11 00:00:59.309  INFO 7668 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-05-11 00:00:59.340  INFO 7668 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-11 00:01:04.663 ERROR 7668 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ribbonClientConfig in com.doctorapi.config.RibbonConfiguration required a bean of type 'com.netflix.client.config.IClientConfig' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.netflix.client.config.IClientConfig' in your configuration.
+
+2020-05-11 00:02:26.776  INFO 12652 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2020-05-11 00:02:27.626  INFO 12652 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=doctor-service, profiles=[default], label=null, version=c013b612aa63a551ca290099fa0584b197e0cd67, state=null
+2020-05-11 00:02:27.628  INFO 12652 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2020-05-11 00:02:27.703  INFO 12652 --- [restartedMain] com.doctorapi.DcotorRestApiApplication   : The following profiles are active: production
+2020-05-11 00:02:30.718  WARN 12652 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-11 00:02:30.795  WARN 12652 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-05-11 00:02:31.231  INFO 12652 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1224019f-701d-38bc-9a5c-9bc9cf923ac8
+2020-05-11 00:02:33.771  INFO 12652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9100 (http)
+2020-05-11 00:02:33.813  INFO 12652 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-11 00:02:33.814  INFO 12652 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-11 00:02:34.301  INFO 12652 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-11 00:02:34.302  INFO 12652 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6500 ms
+2020-05-11 00:02:34.666  WARN 12652 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-11 00:02:34.667  INFO 12652 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-11 00:02:34.691  INFO 12652 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5109a820
+2020-05-11 00:02:36.532  INFO 12652 --- [restartedMain] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2020-05-11 00:02:36.810  INFO 12652 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-11 00:02:37.541  WARN 12652 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ribbonConfiguration': Unsatisfied dependency expressed through field 'ribbonClientConfig'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.netflix.client.config.IClientConfig' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-05-11 00:02:37.548  INFO 12652 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-05-11 00:02:37.557  WARN 12652 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-11 00:02:37.593  INFO 12652 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-11 00:02:38.166 ERROR 12652 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ribbonClientConfig in com.doctorapi.config.RibbonConfiguration required a bean of type 'com.netflix.client.config.IClientConfig' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.netflix.client.config.IClientConfig' in your configuration.
+
