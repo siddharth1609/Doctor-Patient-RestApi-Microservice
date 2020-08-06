@@ -20,7 +20,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bffc5934-63bf-4756-95f1-24b0ceaed5f6" name="Default Changelist" comment="Zuul server added" />
+    <list default="true" id="bffc5934-63bf-4756-95f1-24b0ceaed5f6" name="Default Changelist" comment="Zuul server added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringCloudConfigServer/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SpringCloudConfigServer/src/main/resources/bootstrap.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
