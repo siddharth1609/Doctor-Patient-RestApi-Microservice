@@ -1,7 +1,7 @@
 package com.doctorapi.controller;
 
-import java.util.List;
-
+import com.doctorapi.patientclient.RestClient;
+import com.doctorapi.services.DoctorServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.doctorapi.patientclient.RestClient;
-import com.doctorapi.services.DoctorServices;
+import java.util.List;
 
 
 @RestController

@@ -1,8 +1,8 @@
 package com.patientapi.service;
 
-import java.util.List;
-
 import com.patientapi.model.Patient;
+
+import java.util.List;
 
 public interface PatientService {
 	
